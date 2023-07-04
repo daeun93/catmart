@@ -1,0 +1,549 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'NotoSans-Bold';
+    src: url(../font/NotoSansKR-Bold.otf);
+}
+@font-face {
+    font-family: 'NotoSans-Medium';
+    src: url(../font/NotoSansKR-Medium.otf);
+}
+@font-face {
+    font-family: 'NotoSans-Light';
+    src: url(../font/NotoSansKR-Light.otf);
+}
+@font-face {
+    font-family: 'Cafe24Dongdong';
+    src: url(../font/Cafe24Dongdong-v2.0.otf);
+}
+@font-face {
+    font-family: 'Cafe24Dongdong';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Dongdong.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 초기설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {list-style: none;}
+a {
+    text-decoration: none;
+    color: #333;
+}
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.left {float: left;}
+.right {float: right;}
+img {vertical-align: top;}
+body {
+    font-family: 'NotoSans-Bold';
+}
+.wrap {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: url('../image/background.jpg') no-repeat top/cover;
+}
+
+/* 모바일 메뉴(햄버거) */
+.mb-bt {
+    /* fixed 설정일때는 z-index를 잘 확인해야함 */
+    position: fixed;
+    right: -30px; top: 30px;
+    width: 30px;
+    height: 20px;
+    z-index: 999;
+}
+.mb-bt.hide {
+    top: -50px;
+}
+.mb-bt::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 0; left: 0;
+    background-color: #ffffff;
+    transition: all .3s;
+}
+.mb-bt .line {
+    content: '';
+    position: absolute;
+    top: 50%; left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all .3s;
+}
+.mb-bt::after {
+    content: '';
+    position: absolute;
+    top: 100%; left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all .3s;
+
+}
+
+/* ==========헤더============ */
+.header {
+    width: 100%;
+}
+.header .inner {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 20px;
+    margin-bottom: 3%;
+}
+.header .inner .nav {
+    height: 54px;
+    margin: 0 auto;
+}
+.header .inner .nav .nav-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+}
+.header .inner .nav .nav-menu li {
+}
+.header .inner .nav .nav-menu li a {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.header .inner .nav .nav-menu li a:hover {
+    color: rgb(85, 159, 255);
+}
+.header .inner .nav .nav-menu li a img {
+}
+.header .inner .nav .nav-menu li a img:hover {
+    transform: scale(80%);
+}
+
+/* ==========비주얼 =========== */
+.visual {
+    width: 100%;
+}
+.visual .inner {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+.visual .inner .visual-img {
+    width: 100%;
+    max-height: 90vh;
+    background: url('../image/main/visual/visual.png') no-repeat;
+    background-size: 50%;
+    background-position: center bottom;
+    padding-top: 10%;
+    padding-bottom: 12%;
+    text-align: center;
+    position: relative;
+}
+.visual .inner .visual-img img {
+    width: 85%;
+}
+.visual .inner .visual-img1 {
+    position: relative;
+    z-index: 1;
+}
+.visual .inner .visual-img2 {
+    width: 20%;
+    position: absolute;
+    bottom: 35%;
+    left: 7%;
+    animation: cat 1.3s linear infinite;
+}
+@keyframes cat {
+    0%{transform: rotate(0);}
+    25%{transform: rotate(10deg);}
+    50%{transform: rotate(0);}
+    75%{transform: rotate(-10deg);}
+    100%{transform: rotate(0);}
+}
+.visual .inner .visual-img3 {
+    width: 25%;
+    position: absolute;
+    bottom: -30px;
+    right: 5%;
+    animation: cat2 1.3s linear infinite;
+}
+@keyframes cat2 {
+    0%{transform: translateX(0)}
+    25%{transform:translateX(10px)}
+    50%{transform: translateX(20px)}
+    75%{transform: translateX(10px)}
+    100%{transform: translateX(0)}
+}
+/* ===========메인============= */
+.main {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+/* 브랜드 스토리 */
+.main .brand-st {
+    width: 70%;
+    margin: 100px auto;
+}
+.main .brand-st .brand-st-title {
+    width: 100%;
+    position: relative;
+}
+.main .brand-st .brand-st-title span {
+    display: block;
+    font-family: 'Cafe24Dongdong';
+    color: #fff;
+    font-size: 1.5rem;
+}
+.main .brand-st .brand-st-title h1 {
+}
+.main .brand-st .brand-st-title h1 img {
+    width: 50%;
+    margin-left: -2%;
+}
+.main .brand-st .brand-st-title a {
+    transition: all .5s;
+}
+.main .brand-st .brand-st-title a:hover img {
+    transform: scale(1.3);
+}
+.main .brand-st .brand-st-title a img {
+    width: 7%;
+    position: absolute;
+    top: 30px; left: 47%;
+}
+
+.main .brand-st .brand-st-img {
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+}
+.main .brand-st .brand-st-img .cloud {
+    width: 50%;
+    animation: cloud 1.3s linear infinite;
+}
+@keyframes cloud {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    75% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.main .brand-st .brand-st-img .b-text {
+    width: 45%;
+    position: absolute;
+    top: 80px; right: 0;
+}
+
+
+/* 캣마트를 선택하는 이유 */
+.main .choice {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 45%;
+}
+.main .choice .choice-title {
+}
+.main .choice .choice-title span {
+    font-family: 'Cafe24Dongdong';
+    color: #fff;
+    font-size: 1.5rem;
+    display: block;
+}
+.main .choice .choice-title h2 {
+    width: 60%;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.main .choice .choice-title h2 img {
+    width: 100%;
+}
+.main .choice > img {
+    width: 30%;
+    position: absolute;
+    animation: clouds 1.3s linear infinite;
+} 
+@keyframes clouds {
+    0% {
+        transform: translateY(0) translateX(-100px);
+    }
+    25% {
+        transform: translateY(-10px) translateX(-100px);
+    }
+    50% {
+        transform: translateY(-20px) translateX(-100px);
+    }
+    75% {
+        transform: translateY(-10px) translateX(-100px);
+    }
+    100% {
+        transform: translateY(0) translateX(-100px);
+    }
+}
+.main .choice .choice-reason {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;  
+}
+.main .choice .choice-reason .reason {
+    position: relative;
+    width: 100%;
+    height: 124px;
+    background: url(../image/main/choice/choice-rectangle.png) no-repeat center/contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main .choice .choice-reason .reason span {
+    font-family: 'Cafe24Dongdong';
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+}
+.main .choice .choice-reason .reason span b {
+    font-weight: normal;
+    font-size: 45px;
+}
+.main .choice .choice-reason .reason img {
+    width: 950px;
+}
+/* 입점브랜드 */
+.main .store-brand {
+    width: 100%;
+}
+.main .store-brand .st-brand-title {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+
+}
+.main .store-brand .st-brand-title .b-top {
+    width: 20%;
+    margin-top: 2%;
+}
+.main .store-brand .st-brand-title .b-bottom {
+    width: 25%;
+    margin-top: -5%;
+}
+/* 입점브랜드 슬라이드 영역 */
+.main .slide {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 1%;
+}
+
+.main .slide .slide-item {
+    width: 300px;
+    transition: all .5s;
+}
+.main .slide .slide-item:hover {
+    transform: scale(1.05);
+}
+.main .slide .slide-item .item1 {
+    width: 230px;
+    height: 230px;
+    background: url(../image/main/store/rectangle3.png) no-repeat center/cover;
+}
+.main .slide .slide-item .item1 img {
+    padding: 60px;
+}
+.main .slide .slide-item .item2 {
+    width: 230px;
+    height: 230px;
+    background: url(../image/main/store/rectangle4.png) no-repeat center/cover;
+}
+.main .slide .slide-item .item2 img {
+    padding: 60px;
+}
+/* 이벤트 영역 */
+.main .event {
+    width: 80%;
+    margin: 0 auto;
+}
+.main .event .event-title {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+.main .event .event-title img {
+    width: 100%;
+    position: relative;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+}
+.main .event .event-box {
+    width: 85%;
+    height: 100%;
+    background-color: #fff;
+    border:1px solid #fff;
+    box-shadow: 3px 3px 5px rgb(173, 173, 173);
+    margin: 0 auto;
+    position: relative;
+}
+.main .event .event-box .box {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.main .event .event-box .box img {
+    width: 312px;
+}
+.main .event .event-box .box a {
+    transition: all .5s;
+}
+.main .event .event-box .box a:hover img {
+    transform: scale(1.02);
+    box-shadow: 1px 1px 2px rgb(187, 187, 187);
+}
+.main .event .event-box button {
+    display: block;
+    width: 130px;
+    height: 40px;
+    background: transparent;
+    border: 3px solid #fff;
+    position: absolute;
+    bottom: -10%; left: 50%;
+    transform: translateX(-50%);
+
+}
+.main .event .event-box button:hover  {
+    border: 3px solid rgb(85, 159, 255);
+}
+.main .event .event-box button:hover a {
+    color: rgb(85, 159, 255);
+}
+.main .event .event-box button a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* 매장위치 */
+.main .store-location {
+    width: 80%;
+    margin: 0 auto;
+}
+.main .store-location .st-loc-title {
+    width: 620px;
+    margin: 0 auto;
+    margin-top: 15%;
+}
+.main .store-location .st-loc-title img {
+    width: 100%;
+}
+.main .store-location .st-loc-spot {
+    display: flex;  
+    justify-content: center;
+    margin-top: 5%;
+    gap: 10%;
+}
+.main .store-location .st-loc-spot .deagu {
+    width: 600px;
+    position: relative;
+}
+.main .store-location .st-loc-spot .deagu h2 {
+    width: 221px;
+}
+.main .store-location .st-loc-spot .deagu h2 img {
+    width: 100%;
+}
+.main .store-location .st-loc-spot .deagu .deagu-map {
+    width: 95%;
+}
+.main .store-location .st-loc-spot .deagu .spot {
+    width: 50px;
+    position: absolute;
+    top: 37%; left: 50%;
+    transition: all .3s;
+}
+.main .store-location .st-loc-spot .deagu .spot:hover {
+    transform: scale(1.3);
+}
+.main .store-location .st-loc-spot .busan {
+    position: relative;
+}
+.main .store-location .st-loc-spot .busan h2 {
+    width: 220px;
+}
+.main .store-location .st-loc-spot .busan h2 img {
+    width: 100%;
+}
+.main .store-location .st-loc-spot .busan-map {
+    width: 95%;
+}
+.main .store-location .st-loc-spot .busan .spot {
+    width: 50px;
+    position: absolute;
+    top: 52%; left: 43%;
+    transition: all .3s;
+}
+.main .store-location .st-loc-spot .busan .spot:hover {
+    transform: scale(1.3);
+}
+
+/* ==========푸터 영역========== */
+.footer {
+    width: 100%;
+    height: 300px;
+    background-color: #1449B3;
+    margin: 0 auto;
+}
+.footer .f-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+.footer .f-inner p {
+    font-family: 'NotoSans-Light';
+    color: #fff;
+    text-align: center;
+}
+.footer .f-inner p img {
+    width: 25px;
+}
+.footer .f-inner p img:hover {
+    transform: scale(1.2);
+}
+.footer .f-inner p b {}

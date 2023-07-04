@@ -1,0 +1,67 @@
+/* 반응형 헤더 */
+@media screen and (max-width: 832px) {
+    .header .inner .nav .nav-menu li a {
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 560px) {
+    .header .inner {
+        width: 90%;
+    }
+    .header .inner .nav .nav-menu li a {
+        font-size: 1em;
+    }
+}
+
+/* 반응형 메인 */
+@media screen and (max-width: 1826px) {
+    .main .event .event-box .box img {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 1600px)
+ {
+    .main .event .event-box .box img {
+        width: 260px;
+    }
+ }
+ @media screen and (max-width: 1722px) {
+    .main .choice {
+        margin-top: 50%;
+    }
+    .main .event .event-box {
+        width: 75%;
+    }
+    .main .event .event-box .box img {
+        width: 250px;
+    }
+ }
+ @media screen and (max-width: 1310px) {
+    .main .brand-st {
+        margin-top: 15%;
+    }
+    .main .choice {
+        margin-top: 60%;
+    }
+    .main .event .event-box {
+        width: 80%;
+    }
+    .main .event .event-box .box img {
+        width: 200px;
+    }
+ }
+ @media screen and (max-width: 1100px) {
+    .main .event .event-title img {
+        width: 80%;
+    }
+    .main .brand-st .brand-st-img .b-text {
+        left:70%; top: 100px;
+    }
+    .main .event .event-box {
+        width: 95%;
+    }
+    .main .event .event-box button {
+        bottom: -20%;
+    }
+ } 
+/* 반응형 푸터 */
